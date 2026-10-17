@@ -14,11 +14,11 @@
 
 /* SYNAPSE // Neobrutalist Theme Overrides */
 [data-theme="synapse"] {
-  --paper: #F5F1E8;
+  --paper: #FFFFFF;
   --acid: #E8FF00;
   --black: #000000;
-  --color-indigo-50: #fbf9f2;
-  --color-indigo-100: #f5f0db;
+  --color-indigo-50: #fbfbfb;
+  --color-indigo-100: #f4f4f4;
   --color-indigo-200: #e8ff0040;
   --color-indigo-300: #e8ff0080;
   --color-indigo-400: #E8FF00;
@@ -30,20 +30,14 @@
   --color-indigo-950: #000000;
 }
 
-[data-theme="synapse"]:not(.dark) {
-  background-color: #F5F1E8 !important;
+[data-theme="synapse"] {
+  background-color: #FFFFFF !important;
   color: #000000 !important;
 }
 
-[data-theme="synapse"]:not(.dark) body {
-  background-color: #F5F1E8 !important;
+[data-theme="synapse"] body {
+  background-color: #FFFFFF !important;
   color: #000000 !important;
-  font-family: 'Space Grotesk', system-ui, sans-serif !important;
-}
-
-[data-theme="synapse"].dark body {
-  background-color: #000000 !important;
-  color: #FFFFFF !important;
   font-family: 'Space Grotesk', system-ui, sans-serif !important;
 }
 

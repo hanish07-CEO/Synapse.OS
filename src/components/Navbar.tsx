@@ -231,17 +231,17 @@ export const Navbar: React.FC<NavbarProps> = ({
               aria-label="Open Theme Customizer"
               className={`p-2 rounded-lg transition-all cursor-pointer relative flex items-center gap-1.5 ${
                 isSynapse
-                  ? 'bg-black text-[#E8FF00] border-[2px] border-black dark:border-[#E8FF00] shadow-[2px_2px_0_0_#000]'
+                  ? 'bg-white text-black border-[2px] border-black hover:bg-[#E8FF00] shadow-[2px_2px_0_0_#000]'
                   : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
-              <Palette className="w-4 h-4" />
+              <Palette className="w-4 h-4 text-black" />
               <span
-                className="w-2.5 h-2.5 rounded-full ring-1 ring-white dark:ring-black"
+                className="w-2.5 h-2.5 rounded-full ring-1 ring-black"
                 style={{ backgroundColor: activeThemeDef.primaryHex }}
               />
               <span className="hidden xl:inline text-[11px] font-bold font-mono">
-                {isSynapse ? 'SYNAPSE' : activeThemeDef.name.split(' ')[0]}
+                {isSynapse ? 'WHITE_THEME' : activeThemeDef.name.split(' ')[0]}
               </span>
             </button>
 
@@ -252,16 +252,16 @@ export const Navbar: React.FC<NavbarProps> = ({
               title={`Mode: ${currentMode.toUpperCase()}`}
               className={`p-2 rounded-lg transition-colors cursor-pointer ${
                 isSynapse
-                  ? 'border-[2px] border-black dark:border-[#E8FF00] bg-white dark:bg-black text-black dark:text-white shadow-[2px_2px_0_0_#000]'
+                  ? 'border-[2px] border-black bg-white text-black hover:bg-slate-100 shadow-[2px_2px_0_0_#000]'
                   : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
               {currentMode === 'light' ? (
                 <Sun className="w-4 h-4 text-amber-500" />
               ) : currentMode === 'oled' ? (
-                <Monitor className="w-4 h-4 text-emerald-400" />
+                <Monitor className="w-4 h-4 text-emerald-500" />
               ) : (
-                <Moon className="w-4 h-4 text-indigo-400" />
+                <Moon className="w-4 h-4 text-black" />
               )}
             </button>
 

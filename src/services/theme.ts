@@ -15,13 +15,13 @@ export interface ThemeDefinition {
 export const AVAILABLE_THEMES: ThemeDefinition[] = [
   {
     id: 'synapse',
-    name: 'SYNAPSE // Neobrutalist',
-    tagline: 'Raw neobrutalist project intelligence with acid yellow, paper canvas & tactile brutal shadows',
+    name: 'SYNAPSE // White Neobrutalist',
+    tagline: 'High-contrast white canvas with 3px solid black borders, hard drop shadows & electric acid yellow',
     primaryHex: '#E8FF00',
     accentHex: '#000000',
-    swatchDark: '#000000',
-    swatchLight: '#F5F1E8',
-    badge: 'Neobrutalism',
+    swatchDark: '#FFFFFF',
+    swatchLight: '#FFFFFF',
+    badge: 'White Theme',
   },
   {
     id: 'indigo',
@@ -135,8 +135,10 @@ export function applyTheme(themeId: ThemeId, mode: DisplayMode): void {
   root.setAttribute('data-theme', themeId);
   root.setAttribute('data-mode', mode);
 
-  // Sync Tailwind .dark class
-  if (mode === 'dark' || mode === 'oled') {
+  // Sync Tailwind .dark class (Synapse is white theme)
+  if (themeId === 'synapse' || mode === 'light') {
+    root.classList.remove('dark');
+  } else if (mode === 'dark' || mode === 'oled') {
     root.classList.add('dark');
   } else {
     root.classList.remove('dark');
