@@ -1,0 +1,6 @@
+{
+  "name": "BlindSpot AI",
+  "description": "Intelligent pre-mortem system that analyzes project documents, requirements, datasets, and workflows to uncover missing assumptions, overlooked constraints, and critical risks before execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
