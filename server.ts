@@ -437,10 +437,10 @@ app.post('/api/reanalyze', async (req, res) => {
     const updatedProject: AnalysisProject = {
       ...project,
       updatedAt: new Date().toISOString(),
-      iterationsCount: project.iterationsCount + 1,
+      iterationsCount: (project.iterationsCount || 0) + 1,
       overallRiskScore: newOverallScore,
       riskLevel: newRiskLevel,
-      summary: `Iteration #${project.iterationsCount + 1}: ${resolvedCount} critical stakeholder questions answered. Pre-mortem risk score mitigated from ${project.overallRiskScore} to ${newOverallScore}. Continued oversight recommended for remaining unverified constraints.`,
+      summary: `Iteration #${(project.iterationsCount || 0) + 1}: ${resolvedCount} critical stakeholder questions answered. Pre-mortem risk score mitigated from ${project.overallRiskScore} to ${newOverallScore}. Continued oversight recommended for remaining unverified constraints.`,
       findings: updatedFindings,
       questions: updatedQuestions
     };
